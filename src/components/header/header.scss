@@ -1,0 +1,21 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #616161;
+  color: #ffffff;
+  padding: 0 30px;
+  height: 60px;
+
+  div {
+    display: flex;
+  }
+
+  p {
+    margin-right: 15px;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}
