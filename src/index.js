@@ -30,8 +30,8 @@ class Main extends React.Component {
         location.href = "/login"
       }
     } else if (isLoggedIn) {
-      if (location.pathname !== "/overview") {
-        location.href = "/overview"
+      if (location.pathname.indexOf("overview") === -1) {
+        location.href = "/overview/mobile"
       }
     }
   }
