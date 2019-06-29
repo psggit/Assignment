@@ -1,3 +1,5 @@
+Steps to run the project: 
+
 1) Clone the project
 
 2) Move to assignment folder
