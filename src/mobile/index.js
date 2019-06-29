@@ -97,7 +97,7 @@ class Mobile extends React.Component {
           <LineChart
             labels={mobileData.labels}
             values={mobileData.values}
-            xLabel="TIME DURATION (YYYY-MM-DD)"
+            xLabel="DATE (YYYY-MM-DD)"
             yLabel="SOLD OUT (NO. )"
             tooltipText="MOBILES"
           />
