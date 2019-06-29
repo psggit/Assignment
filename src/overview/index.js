@@ -53,7 +53,7 @@ class Overview extends React.Component {
    */
   applyFilter(e) {
     e.preventDefault()
-    this.setFilter(this.state.mobileData)
+    this.setFilter(mobile)
   }
 
   setFilter(mobileData) {
@@ -77,7 +77,7 @@ class Overview extends React.Component {
       })
       this.props.history.push(`/overview?fromDate=${fromDate}&toDate=${toDate}`)
     } else {
-      alert("Selected date is not valid")
+      alert("Selected date is invalid")
     }
   }
 
