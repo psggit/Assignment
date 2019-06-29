@@ -50,20 +50,20 @@ class Overview extends React.Component {
             </li>
           </ul>
         </div>
-        <div className="chart">
-          {
-            activeTab === "mobile" &&
-            <Mobile />
-          }
-          {
-            activeTab === "tablet" &&
-            <Tablet />
-          }
-          {
-            activeTab === "gadgets" &&
-            <Gadgets />
-          }
-        </div>
+        {
+          activeTab === "mobile" &&
+          <Mobile
+            history={this.props.history}
+          />
+        }
+        {
+          activeTab === "tablet" &&
+          <Tablet />
+        }
+        {
+          activeTab === "gadgets" &&
+          <Gadgets />
+        }
       </div>
     )
   }

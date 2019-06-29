@@ -4,10 +4,12 @@ import { gadgets } from "./../static-data"
 
 const Gadgets = () => {
   return (
-    <PieChart
-      labels={gadgets.labels}
-      values={gadgets.values}
-    />
+    <div className="chart">
+      <PieChart
+        labels={gadgets.labels}
+        values={gadgets.values}
+      />
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 import LineChart from "Components/lineChart"
 import Button from "Components/button"
+import FilterComponent from "Components/filter"
 import { mobile } from "./../static-data"
 import React from "react"
 
@@ -92,43 +93,52 @@ class Mobile extends React.Component {
     const { mobileData, fromDate, toDate } = this.state
     return (
       <React.Fragment>
-        <LineChart
-          labels={mobileData.labels}
-          values={mobileData.values}
-          xLabel="TIME DURATION (YYYY-MM-DD)"
-          yLabel="SOLD OUT (NO. )"
-          tooltipText="MOBILES"
-        />
-        {
-          <div className="footer">
-            <form onSubmit={this.applyFilter}>
-              <div>
-                <label>From</label>
-                <input
-                  type="date"
-                  required
-                  pattern="\d{1,2}/\d{1,2}/\d{4}"
-                  name="fromDate"
-                  value={this.state.fromDate}
-                  onChange={(e) => this.handleDateChange(e)}
-                />
-              </div>
-              <div>
-                <label>To</label>
-                <input
-                  type="date"
-                  name="toDate"
-                  pattern="\d{1,2}/\d{1,2}/\d{4}"
-                  required
-                  value={this.state.toDate}
-                  onChange={(e) => this.handleDateChange(e)}
-                />
-              </div>
-              <Button handleClick={this.applyFilter}>Filter</Button>
-            </form>
-            <Button handleClick={this.resetFilter}>Reset</Button>
-          </div>
-        }
+        <div className="chart">
+          <LineChart
+            labels={mobileData.labels}
+            values={mobileData.values}
+            xLabel="TIME DURATION (YYYY-MM-DD)"
+            yLabel="SOLD OUT (NO. )"
+            tooltipText="MOBILES"
+          />
+        </div>
+        {/* <div className="footer">
+          <form onSubmit={this.applyFilter}>
+            <div>
+              <label>From</label>
+              <input
+                type="date"
+                required
+                pattern="\d{1,2}/\d{1,2}/\d{4}"
+                name="fromDate"
+                value={this.state.fromDate}
+                onChange={(e) => this.handleDateChange(e)}
+              />
+            </div>
+            <div>
+              <label>To</label>
+              <input
+                type="date"
+                name="toDate"
+                pattern="\d{1,2}/\d{1,2}/\d{4}"
+                required
+                value={this.state.toDate}
+                onChange={(e) => this.handleDateChange(e)}
+              />
+            </div>
+            <Button handleClick={this.applyFilter}>Filter</Button>
+          </form>
+          <Button handleClick={this.resetFilter}>Reset</Button>
+        </div> */}
+        <div className="footer">
+          <FilterComponent
+            fromDate={fromDate}
+            toDate={toDate}
+            applyFilter={this.applyFilter}
+            resetFilter={this.resetFilter}
+            handleDateChange={this.handleDateChange}
+          />
+        </div>
       </React.Fragment>
     )
   }

@@ -4,13 +4,15 @@ import { tablet } from "./../static-data"
 
 const Tablet = () => {
   return (
-    <BarChart
-      labels={tablet.labels}
-      values={tablet.values}
-      xLabel="TIME DURATION (YYYY-MM-DD)"
-      yLabel="SOLD OUT (NO. )"
-      tooltipText="TABLET"
-    />
+    <div className="chart">
+      <BarChart
+        labels={tablet.labels}
+        values={tablet.values}
+        xLabel="TIME DURATION (YYYY-MM-DD)"
+        yLabel="SOLD OUT (NO. )"
+        tooltipText="TABLET"
+      />
+    </div>
   )
 }
 
