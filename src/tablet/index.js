@@ -8,7 +8,7 @@ const Tablet = () => {
       <BarChart
         labels={tablet.labels}
         values={tablet.values}
-        xLabel="TIME DURATION (YYYY-MM-DD)"
+        xLabel="DATE (YYYY-MM-DD)"
         yLabel="SOLD OUT (NO. )"
         tooltipText="TABLET"
       />
