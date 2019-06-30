@@ -31,7 +31,7 @@ class Main extends React.Component {
       }
     } else if (isLoggedIn) {
       if (location.pathname.indexOf("overview") === -1) {
-        location.href = "/overview/mobile"
+        location.href = "/overview"
       }
     }
   }
